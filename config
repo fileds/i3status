@@ -1,0 +1,58 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+# i3status configuration — Tokyo Night Storm
+
+general {
+    colors   = true
+    interval = 5
+    color_good     = "#9ECE6A"  # thm_green
+    color_degraded = "#E0AF68"  # thm_yellow
+    color_bad      = "#F7768E"  # thm_red
+}
+
+order += "cpu_usage"
+order += "memory"
+order += "disk /"
+order += "ethernet _first_"
+order += "tztime local"
+
+cpu_usage {
+    format = " cpu %usage "
+}
+
+memory {
+    format          = " 󰍛 %used / %available "
+    threshold_degraded = "1G"
+    format_degraded = " 󰍛 MEM LOW: %available "
+}
+
+disk "/" {
+    format = " ⛁ %avail "
+}
+
+ethernet _first_ {
+    format_up   = " lan: %ip "
+    format_down = " no lan "
+}
+
+battery all {
+    format                   = " %status %percentage "
+    format_down              = " no battery "
+    last_full_capacity       = true
+    integer_battery_capacity = true
+    status_chr  = "⚡"
+    status_bat  = ""
+    status_unk  = ""
+    status_full = "☻"
+    low_threshold  = 15
+    threshold_type = time
+}
+
+tztime local {
+    format = " %d.%m. %H:%M "
+}
