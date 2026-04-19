@@ -26,7 +26,7 @@ cpu_usage {
 }
 
 memory {
-    format          = " 󰍛 %used / %available "
+    format          = " 󰍛 %used/%available "
     threshold_degraded = "1G"
     format_degraded = " 󰍛 MEM LOW: %available "
 }
@@ -54,5 +54,5 @@ battery all {
 }
 
 tztime local {
-    format = " %d.%m. %H:%M "
+    format = " %d/%m %H:%M "
 }
