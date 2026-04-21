@@ -38,13 +38,13 @@ disk "/" {
 
 
 wireless _first_ {
-        format_up = ": (%quality) %ip"
-        format_down = "󰖪"
+        format_up = "   (%quality) %ip"
+        format_down = " 󰖪 "
 }
 
 ethernet _first_ {
-    format_up   = " 󰌘 %ip "
-    format_down = " 󰌙 "
+    format_up   = " 󰌘  %ip "
+    format_down = " 󰌙  "
 }
 
 battery all {
